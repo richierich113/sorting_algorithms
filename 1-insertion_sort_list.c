@@ -23,23 +23,28 @@ void insertion_sort_list(listint_t **list)
 		nxt_node = nxt_node->next;
 	}
 }
+
+
 /**
- *swap_node - swap a node for his previous one
- *@node: node
- *@list: node list
- *Return: return a pointer to a node which was enter it
+ * swap_node - swap a node with previous node
+ * @node: node parameter
+ * @list: node list parameter
+ * Return: return a pointer to a node which was enter it
  */
 listint_t *swap_node(listint_t *node, listint_t **list)
 {
-	listint_t *back = node->prev, *current = node;
-	/*NULL, 19, 48, 9, 71, 13, NULL*/
+	listint_t *prev_node = node->prev;
+	listint_t *current = node;
 
-	back->next = current->next;
+	prev_node->next = current->next;
+
 	if (current->next)
-		current->next->prev = back;
-	current->next = back;
-	current->prev = back->prev;
-	back->prev = current;
+		current->next->prev = prev_node;
+
+	current->next = prev_node;
+	current->prev = prev_node->prev;
+	prev_node->prev = current;
+
 	if (current->prev)
 		current->prev->next = current;
 	else
