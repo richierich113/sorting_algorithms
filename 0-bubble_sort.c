@@ -13,6 +13,7 @@ void bubble_sort(int *array, size_t size)
 		return;
 
 	for (i = 0; i < size; i++)
+	{
 		for (indx = 0; indx < size; indx++)
 		{
 			if (array[indx] > array[indx + 1])
@@ -24,4 +25,5 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 			}
 		}
+	}
 }
