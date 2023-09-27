@@ -13,9 +13,7 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	/**for (nxt_node = (*list)->next; nxt_node != NULL; nxt_node = temp)*/
-	nxt_node = (*list)->next;
-	while (nxt_node != NULL)
+	for (nxt_node = (*list)->next; nxt_node != NULL; nxt_node = temp)
 	{
 		temp = nxt_node->next;
 
@@ -26,12 +24,6 @@ void insertion_sort_list(listint_t **list)
 			swapper(list, &prev_node, nxt_node);
 			print_list((const listint_t *)*list);
 		}
-		if (temp == NULL)
-			break;
-
-		nxt_node = temp;
-		if (nxt_node != NULL)
-			(*list)->next = nxt_node;
 	}
 }
 
