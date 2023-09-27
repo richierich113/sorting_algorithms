@@ -13,7 +13,8 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	for (nxt_node = (*list)->next; nxt_node != NULL; nxt_node = temp)
+	/**for (nxt_node = (*list)->next; nxt_node != NULL; nxt_node = temp)*/
+	while (nxt_node != NULL)
 	{
 		temp = nxt_node->next;
 
@@ -21,7 +22,7 @@ void insertion_sort_list(listint_t **list)
 
 		while (prev_node != NULL && nxt_node->n < prev_node->n)
 		{
-			swap_nodes(list, &prev_node, nxt_node);
+			swapper(list, &prev_node, nxt_node);
 			print_list((const listint_t *)*list);
 		}
 	}
@@ -34,7 +35,7 @@ void insertion_sort_list(listint_t **list)
  * @first_node: A pointer to the first node to swap parameter
  * @sec_node: The second node to swap parameter
  */
-void swap_nodes(listint_t **h, listint_t **first_node, listint_t *sec_node)
+void swapper(listint_t **h, listint_t **first_node, listint_t *sec_node)
 {
 	(*first_node)->next = sec_node->next;
 
