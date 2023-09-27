@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 
 
 /**
- * swap_nodes - Swap two nodes in doubly-linked list.
+ * swapper - Swap two nodes in doubly-linked list.
  * @h: A pointer to doubly-linked list parameter
  * @first_node: A pointer to the first node to swap parameter
  * @sec_node: The second node to swap parameter
