@@ -15,7 +15,6 @@ void insertion_sort_list(listint_t **list)
 
 	/**for (nxt_node = (*list)->next; nxt_node != NULL; nxt_node = temp)*/
 	nxt_node = (*list)->next;
-	
 	while (nxt_node != NULL)
 	{
 		temp = nxt_node->next;
