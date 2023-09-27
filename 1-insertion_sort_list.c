@@ -14,6 +14,8 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	/**for (nxt_node = (*list)->next; nxt_node != NULL; nxt_node = temp)*/
+	nxt_node = (*list)->next;
+	nxt_node = temp;
 	while (nxt_node != NULL)
 	{
 		temp = nxt_node->next;
