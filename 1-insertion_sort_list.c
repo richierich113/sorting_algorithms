@@ -30,6 +30,8 @@ void insertion_sort_list(listint_t **list)
 			break;
 
 		nxt_node = temp;
+		if (nxt_node != NULL)
+			(*list)->next = nxt_node;
 	}
 }
 
