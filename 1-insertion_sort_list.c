@@ -26,6 +26,9 @@ void insertion_sort_list(listint_t **list)
 			swapper(list, &prev_node, nxt_node);
 			print_list((const listint_t *)*list);
 		}
+		if (temp == NULL)
+			break;
+
 		nxt_node = temp;
 	}
 }
